@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
+import data from './instagram-feed/data';
+import Instagram from './instagram-feed/InstagramFeed';
+import Stories from './instagram-feed/Stories';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Instagram />
+      {/* <Stories
+        stories={data.stories}
+        profile={data.profile}
+      /> */}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
